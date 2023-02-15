@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-US" class="js">
-    <head>    
+<html lang="en-US">
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="device-width" initial-scale="1.0">
+    <meta name="viewport" content="device-width">
     <meta name="keywords" content="tic tac toe, game, x, o, answer">
     <meta name="author" content="TiC TaC ToE">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <title>TiC TaC ToE</title>
-    </head>
-    <body>
-        <div id="outer-header-container">
+</head>
+
+<body>
+    <!--Here starting the header area-->
+    <div id="outer-header-container">
         <header id="home" class="text-center page-header">
             <div class="header-text black-background">
                 <h1 class="heading">
-                <img class="logo" src="./assets/images/header-image1.jpg">
-                 TiC TaC ToE
+                    <img class="logo" src="./assets/images/header-image1.jpg" alt="tic tac toe picture">
+                    TiC TaC ToE
+                    <img class="logo" src="./assets/images/header-image1.jpg" alt="tic tac toe picture">
                 </h1>
-                <p><h2>Let's play...Enjoy!</h2></p>
+                <h2>Let's play...Enjoy!</h2>
+                <!--Here starting the game area-->
                 <div class="game-area"></div>
-                <section class="display">
+                <div class="display">
                     Player <span class="display-player playerX">X</span>'s turn
-                </section>
-                <section class="container">
+                </div>
+                <div class="container">
                     <div class="tile"></div>
                     <div class="tile"></div>
                     <div class="tile"></div>
@@ -32,29 +37,37 @@
                     <div class="tile"></div>
                     <div class="tile"></div>
                     <div class="tile"></div>
-                </section>
+                </div>
             </div>
-            <div class="results-area bottom-space">
-                <p class="win"> Wins O : </p>
-                    <span id="win-O">0</span>
-                
-                <div class="results-area">
-                    <p class="draw"> Draw : </p>
+            <!--Here you can see the result area-->
+            <div class="results-area">
+                <div class="results">
+                    <div class="result bottom-space">
+                        <p class="win"> Wins O</p>
+                        <span id="win-O">0</span>
+                    </div>
+                    <div class="result draw">
+                        <p class="draw"> Draw</p>
                         <span id="draw">0</span>
-                
-                <div class="results-area"></div>
-                <p class="win"> Wins X :</p>
-                    <span id="win-X">0</span>
+                    </div>
+                    <div class="result winX">
+                        <p class="win"> Wins X</p>
+                        <span id="win-X">0</span>
+                    </div>
+                </div>
+                <!--Here is the reset button-->
+                <div class="reset-button">
+                    <button id="reset"><b>Reset</b></button>
+                </div>
             </div>
-            <section class="reset-button">
-                <button id="reset">Reset</button>
-            </section>
+
         </header>
-    <figure data-orientation="square" class="target-reveal"></figure>
+    </div>
+    <footer>
+        <p>Copyright 2023</p>
+    </footer>
     <script src="assets/js/index.js"></script>
-    </body>
-<footer>
-    <p>Copyright 2023</p>
-</footer>
+</body>
+
 
 </html>
