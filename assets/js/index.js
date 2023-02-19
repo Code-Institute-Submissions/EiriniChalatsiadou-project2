@@ -10,7 +10,7 @@ const winnerX = "WINNER-X";
 const winnerO = "WINNER-O";
 const winnerDRAW = "WINNER-DRAW";
 
-
+//This is the function for increaseByOneResultBoard
 function increaseByOneResultBoard(result) {
     if (result === winnerX) {
         let winx = document.getElementById("win-X").innerHTML;
