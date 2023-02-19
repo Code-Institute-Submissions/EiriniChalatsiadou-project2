@@ -1,13 +1,16 @@
+/* Here is the properties for the outer header container*/
 #outer-header-container {
-    width: 1440px;
+    width: 900px;
     margin: 0 auto;
 }
 
+/* Here is the properties for the header*/
 .heading {
-    text-align: center;
-    font-size: 3rem;
+    text-align:center;
+    font-size: 1.4rem;
 }
 
+/* Here is the logo*/
 .logo {
     width: 40px;
 }
@@ -17,16 +20,16 @@ body {
     background-color: rgb(8, 1, 1);
     font-family: "Arial Black", sans-serif;
     color: #c8c9ca;
-    text-align: center;
+    text-align: center;    
 }
 
-
-
+/* Here is for the bottom space*/
 .bottom-space {
     margin: 0 auto;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
+/* Here is the properties for the container and the tiles*/
 .container {
     margin: 0 auto;
     display: grid;
@@ -43,14 +46,12 @@ body {
     cursor: grab;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
-
-
+    /* padding-bottom: 10%; */
 }
 
 /* here you can see the colors that i used for each player */
-
 .playerX {
     color: #d298ba;
 }
@@ -58,9 +59,21 @@ body {
 .playerO {
     color: #4cd1ef;
 }
+/* here is the buttons-icons for each player */
+.player-O-icon {
+    background-image: url('../images/O.png');
+    background-repeat: no-repeat;
+    background-size:  120px;
+    background-position: 4px 12px;
+}
+.player-X-icon {
+    background-image: url('../images/X.png');
+    background-repeat: no-repeat;
+    background-size:  79px;
+    background-position: 24px 10px;
+}
 
-/* Here is the css code for results */
-
+/* Here is the css code for the results */
 .result {
     float: left;
     width: 33.3%;
@@ -68,12 +81,19 @@ body {
 }
 .results-area {
     width: 100%;
-    margin: 5px auto;
+    margin: 2.5px auto;
     font-size: 1.4rem;
     display: block;
 }
 
+/* Here is the properties for the reset button*/
 #reset {
     width: 180px;
     height: 50px;
+    font-size: 1.1rem;
+}
+    
+.reset-button {
+    clear:both;
+    font-size: 1.4rem;
 }
