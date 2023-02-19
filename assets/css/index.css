@@ -5,13 +5,13 @@
 }
 
 /* Here is the properties for the header*/
-.heading {
+/* .heading {
     text-align:center;
-}
+} */
 
 /* Here is the logo*/
 .logo {
-    width: 40px;
+    width: 60px;
 }
 
 /* Here is the code for the body */
@@ -22,11 +22,6 @@ body {
     text-align: center;    
 }
 
-/* Here is for the bottom space*/
-.bottom-space {
-    margin: 0 auto;
-    /* padding-bottom: 20px; */
-}
 
 /* Here is the properties for the container and the tiles*/
 .container {
