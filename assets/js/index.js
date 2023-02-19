@@ -23,20 +23,31 @@ function increaseByOneResultBoard(result) {
         document.getElementById("draw").innerHTML = Number(draw) + 1;
     }
 }
+//show x to board
+function addXorO() {
+    //add class x to element
+    this.classList.add('player-X-icon');
+}
 
-// increaseByOneResultBoard(winnerX);
-// increaseByOneResultBoard(winnerO);
-// increaseByOneResultBoard(winnerDRAW);
+function addEventListeners() {
 
+    // take all elements witl class tile
+    let tiles = document.getElementsByClassName('tile');
+    console.log(tiles);
+    // for loop to take each element
+    for (let i = 0; i < tiles.length; i++) {
+        tiles[i].addEventListener('click', addXorO);
+    }
+}
+addEventListeners();
+//add clearboard on reset click
 
-
-//addX(position)
-//addO(position)
 
 //calculateMove
 //startGame()
 
 //decideWinner()
 //thereIsAWinner
-//blinkWinningRow
-//makeWinningSound
+//  blinkWinningRow
+//  makeWinningSound
+//NEED DO: fix effect on click board

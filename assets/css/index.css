@@ -1,17 +1,13 @@
+
 /* Here is the properties for the outer header container*/
 #outer-header-container {
     width: 900px;
     margin: 0 auto;
 }
 
-/* Here is the properties for the header*/
-/* .heading {
-    text-align:center;
-} */
-
 /* Here is the logo*/
 .logo {
-    width: 60px;
+    width: 50px;
 }
 
 /* Here is the code for the body */
@@ -24,6 +20,7 @@ body {
 
 
 /* Here is the properties for the container*/
+
 .container {
     margin: 0 auto;
     display: grid;
@@ -33,6 +30,7 @@ body {
     max-height: fit-content;
     margin-bottom: 2.5rem;
 }
+
 /* Here is the properties for the tiles*/
 .tile {
     border: 3px solid #aeb2b4;
