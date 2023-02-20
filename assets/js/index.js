@@ -40,7 +40,41 @@ function addEventListeners() {
     }
 }
 addEventListeners();
-//add clearboard on reset click
+
+function decideWinner() {
+    let winningTiles = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+    for (let i = 0; i < winningTiles.length; i++) {
+        chechWinnerPlayerX()
+    }
+}
+
+// function chechWinnerPlayerX(winningPositions) {
+//     let tiles = document.getElementsByClassName('tile');
+//     let position1 = winningPositions[0];
+//     let position2 = winningPositions[1];
+//     let position3 = winningPositions[2];
+
+//     let position1HasX = tiles[position1].classList.contains('player-X-icon');
+//     let position2HasX = tiles[position2].classList.contains('player-X-icon');
+//     let position3HasX = tiles[position3].classList.contains('player-X-icon');
+
+//     let result = (position1HasX === true) && (position2HasX === true) && (position3HasX === true)
+//     return result;
+
+// }
+
+//  checkWinnerPlayerX([3, 4, 5]);
+
+
 
 
 //calculateMove
