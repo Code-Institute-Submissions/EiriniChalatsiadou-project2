@@ -40,7 +40,7 @@ function addEventListeners() {
     }
 }
 addEventListeners();
-
+// This is the function for decide the Winner
 function decideWinner() {
     let winningTiles = [
         [0, 1, 2],
@@ -52,36 +52,65 @@ function decideWinner() {
         [0, 4, 8],
         [2, 4, 6]
     ];
+
     for (let i = 0; i < winningTiles.length; i++) {
-        chechWinnerPlayerX()
+        let winningCombination = winningTiles[i];
+        checkWinnerPlayerX(winningCombination);
+        // if player x is winner return winnerX
+        // if player o is winner return winnerO
     }
+
+    //need to check if draw
+
+
 }
+//Here is the function for checkWinnerPlayerX
 
-// function chechWinnerPlayerX(winningPositions) {
-//     let tiles = document.getElementsByClassName('tile');
-//     let position1 = winningPositions[0];
-//     let position2 = winningPositions[1];
-//     let position3 = winningPositions[2];
+function checkWinnerPlayerX(winningPositions) {
+    let tiles = document.getElementsByClassName('tile');
+    let position1 = winningPositions[0];
+    let position2 = winningPositions[1];
+    let position3 = winningPositions[2];
 
-//     let position1HasX = tiles[position1].classList.contains('player-X-icon');
-//     let position2HasX = tiles[position2].classList.contains('player-X-icon');
-//     let position3HasX = tiles[position3].classList.contains('player-X-icon');
+    let position1HasX = tiles[position1].classList.contains('player-X-icon');
+    let position2HasX = tiles[position2].classList.contains('player-X-icon');
+    let position3HasX = tiles[position3].classList.contains('player-X-icon');
 
-//     let result = (position1HasX === true) && (position2HasX === true) && (position3HasX === true)
-//     return result;
+//here is the result if its true
+    let result = (position1HasX === true) && (position2HasX === true) && (position3HasX === true)
+    return result;
 
-// }
+}
+checkWinnerPlayerX([3, 4, 5]);
 
-//  checkWinnerPlayerX([3, 4, 5]);
+console.log('AAA', 'PlayX', checkWinnerPlayerX([3, 4, 5]));
+
+//Here is the function for checkWinnerPlayer O
+function checkWinnerPlayerO(winningPositions) {
+    let tiles = document.getElementsByClassName('tile');
+    let position1 = winningPositions[0];
+    let position2 = winningPositions[1];
+    let position3 = winningPositions[2];
+
+    let position1HasO = tiles[position1].classList.contains('player-O-icon');
+    let position2HasO = tiles[position2].classList.contains('player-O-icon');
+    let position3HasO = tiles[position3].classList.contains('player-O-icon');
+
+    //here is the result if its true
+    let result = (position1HasO === true) && (position2HasO === true) && (position3HasO === true)
+    return result;
+}
+checkWinnerPlayerO([0, 1, 2]);
+console.log('playerO', checkWinnerPlayerO([0, 1, 2]));
 
 
 
 
 //calculateMove
 //startGame()
-
-//decideWinner()
 //thereIsAWinner
 //  blinkWinningRow
 //  makeWinningSound
 //NEED DO: fix effect on click board
+
+//???random be x or o
