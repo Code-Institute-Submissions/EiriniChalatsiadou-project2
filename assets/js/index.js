@@ -56,13 +56,13 @@ function decideWinner() {
     for (let i = 0; i < winningTiles.length; i++) {
         const winningCombination = winningTiles[i];
         //check if X is winning
-        const winnerIsX = checkWinnerPlayerX(winningCombination);
+        const winnerIsX = checkWinnerPlayer(winningCombination, 'X');
         // if player x is winner return winnerX
         if (winnerIsX === true) {
             return winnerX;
         }
         //check if O is winning
-        const winnerIsO = checkWinnerPlayerO(winningCombination);
+        const winnerIsO = checkWinnerPlayer(winningCombination, 'O');
         // if player O is winner return winnerO
         if (winnerIsO === true) {
             return winnerO;
@@ -81,42 +81,27 @@ console.log('Decided winner test',decideWinner());
 
 //Here is the function for checkWinnerPlayerX
 
-function checkWinnerPlayerX(winningPositions) {
+function checkWinnerPlayer(winningPositions, playerIcon) {
     let tiles = document.getElementsByClassName('tile');
     let position1 = winningPositions[0];
     let position2 = winningPositions[1];
     let position3 = winningPositions[2];
 
-    let position1HasX = tiles[position1].classList.contains('player-X-icon');
-    let position2HasX = tiles[position2].classList.contains('player-X-icon');
-    let position3HasX = tiles[position3].classList.contains('player-X-icon');
+    let position1HasPlayerIcon = tiles[position1].classList.contains('player-' + playerIcon + '-icon');
+    let position2HasPlayerIcon = tiles[position2].classList.contains('player-' + playerIcon + '-icon');
+    let position3HasPlayerIcon = tiles[position3].classList.contains('player-' + playerIcon + '-icon');
 
     //here is the result if its true
-    let result = (position1HasX === true) && (position2HasX === true) && (position3HasX === true)
+    let result = (position1HasPlayerIcon === true) && (position2HasPlayerIcon === true) && (position3HasPlayerIcon === true)
     return result;
 
 }
-checkWinnerPlayerX([3, 4, 5]);
+checkWinnerPlayer([3, 4, 5], 'X');
 
-console.log(checkWinnerPlayerX([3, 4, 5]));
+console.log(checkWinnerPlayer([3, 4, 5], 'X'));
 
-//Here is the function for checkWinnerPlayer O
-function checkWinnerPlayerO(winningPositions) {
-    let tiles = document.getElementsByClassName('tile');
-    let position1 = winningPositions[0];
-    let position2 = winningPositions[1];
-    let position3 = winningPositions[2];
-
-    let position1HasO = tiles[position1].classList.contains('player-O-icon');
-    let position2HasO = tiles[position2].classList.contains('player-O-icon');
-    let position3HasO = tiles[position3].classList.contains('player-O-icon');
-
-    //here is the result if its true
-    let result = (position1HasO === true) && (position2HasO === true) && (position3HasO === true)
-    return result;
-}
-checkWinnerPlayerO([0, 1, 2]);
-console.log(checkWinnerPlayerO([0, 1, 2]));
+checkWinnerPlayerO([0, 1, 2], 'O');
+console.log(checkWinnerPlayerO([0, 1, 2], 'O'));
 
 
 

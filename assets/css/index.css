@@ -28,7 +28,7 @@ body {
     grid-template-rows: 33% 33% 33%;
     max-width: 400px;
     max-height: fit-content;
-    margin-bottom: 2.3rem;
+    margin-bottom: 1.3rem;
 }
 
 /* Here is the properties for the tiles*/
