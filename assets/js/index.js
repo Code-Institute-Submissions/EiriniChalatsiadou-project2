@@ -54,16 +54,31 @@ function decideWinner() {
     ];
 
     for (let i = 0; i < winningTiles.length; i++) {
-        let winningCombination = winningTiles[i];
-        checkWinnerPlayerX(winningCombination);
+        const winningCombination = winningTiles[i];
+        //check if X is winning
+        const winnerIsX = checkWinnerPlayerX(winningCombination);
         // if player x is winner return winnerX
-        // if player o is winner return winnerO
+        if (winnerIsX === true) {
+            return winnerX;
+        }
+        //check if O is winning
+        const winnerIsO = checkWinnerPlayerO(winningCombination);
+        // if player O is winner return winnerO
+        if (winnerIsO === true) {
+            return winnerO;
+        }
     }
-
-    //need to check if draw
-
-
 }
+
+
+console.log('Decided winner test',decideWinner());
+
+
+
+//need to check if draw
+
+
+
 //Here is the function for checkWinnerPlayerX
 
 function checkWinnerPlayerX(winningPositions) {
@@ -76,14 +91,14 @@ function checkWinnerPlayerX(winningPositions) {
     let position2HasX = tiles[position2].classList.contains('player-X-icon');
     let position3HasX = tiles[position3].classList.contains('player-X-icon');
 
-//here is the result if its true
+    //here is the result if its true
     let result = (position1HasX === true) && (position2HasX === true) && (position3HasX === true)
     return result;
 
 }
 checkWinnerPlayerX([3, 4, 5]);
 
-console.log('AAA', 'PlayX', checkWinnerPlayerX([3, 4, 5]));
+console.log(checkWinnerPlayerX([3, 4, 5]));
 
 //Here is the function for checkWinnerPlayer O
 function checkWinnerPlayerO(winningPositions) {
@@ -101,7 +116,7 @@ function checkWinnerPlayerO(winningPositions) {
     return result;
 }
 checkWinnerPlayerO([0, 1, 2]);
-console.log('playerO', checkWinnerPlayerO([0, 1, 2]));
+console.log(checkWinnerPlayerO([0, 1, 2]));
 
 
 
