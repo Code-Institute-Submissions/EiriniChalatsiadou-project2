@@ -28,7 +28,7 @@ body {
     grid-template-rows: 33% 33% 33%;
     max-width: 400px;
     max-height: fit-content;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.3rem;
 }
 
 /* Here is the properties for the tiles*/
@@ -72,8 +72,8 @@ body {
     float: left;
     width: 33.3%;
     display: inline-table;
-    margin-bottom: 5rem;
-    margin-top: 2.5rem;
+    margin-bottom: 0.4rem;
+    margin-top:auto;
 }
 
 .results-area {
