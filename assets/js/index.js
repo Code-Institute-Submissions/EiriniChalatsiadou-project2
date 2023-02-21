@@ -24,19 +24,19 @@ function increaseByOneResultBoard(result) {
     }
 }
 //show x to board
-function addXorO() {
+function addX() {
     //add class x to element
     this.classList.add('player-X-icon');
+    //call computerTurn
+    computerTurn();
 }
 
 function addEventListeners() {
-
-    // take all elements witl class tile
+    // take all elements with class tile
     let tiles = document.getElementsByClassName('tile');
-    console.log(tiles);
     // for loop to take each element
     for (let i = 0; i < tiles.length; i++) {
-        tiles[i].addEventListener('click', addXorO);
+        tiles[i].addEventListener('click', addX);
     }
 }
 addEventListeners();
@@ -74,6 +74,7 @@ function decideWinner() {
     } else {
         return null;
     }
+
 }
 
 console.log('Decided winner test', decideWinner());
@@ -88,12 +89,13 @@ function isDraw() {
         const tileHasX = tiles[i].classList.contains('player-X-icon');
         //check if O class exist for tile i
         const tileHasO = tiles[i].classList.contains('player-O-icon');
-        //if both are false then return false
+        //if both are false then return null
         if (tileHasX === false && tileHasO === false) {
             return false;
         }
     }
-    //outside loop return true
+
+    //outside loop return winnerDRAW
     return true;
 }
 
@@ -111,18 +113,40 @@ function checkWinnerPlayer(winningPositions, playerIcon) {
 
     //here is the result if its true
     let result = (position1HasPlayerIcon === true) && (position2HasPlayerIcon === true) && (position3HasPlayerIcon === true)
-    return result;
 
+    return result;
 }
 
 
+function startGame() {
 
-//startGame()
-//  clearboard()
-// if ( math.random > 0.5 )
+    //clears board
+    clearBoard();
+    if (Math.random() > 0.5) {
+        //player x turn
+        playerTurn();
+    } else {
+        // player 0 turn
+        computerTurn();
+    }
+}
 
+function playerTurn() {
+    //show player  x turn div
+    let XplayerTurn = document.getElementById("display-player-x-turn");
+    XplayerTurn.classList.remove("hide");
+}
 
+function computerTurn() {
+    //computer's Turn
+    let computerTurn = document.getElementById("display-player-x-turn");
+    computerTurn.classList.add("hide");
+    playerTurn();
+    //TODO: hide player x turn
+    //calculateMove();
+    //TODO: call playerTurn
 
+}
 
 //calculateMove
 

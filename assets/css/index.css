@@ -5,6 +5,11 @@
     margin: 0 auto;
 }
 
+
+.hide{
+    display:none;
+}
+
 /* Here is the logo*/
 .logo {
     width: 50px;
