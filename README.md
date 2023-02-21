@@ -4,3 +4,32 @@ Games played on three-in-a-row boards can be traced back to ancient Egypt, where
 An early variation of tic-tac-toe was played in the Roman Empire, around the first century BC.
 
 This game is for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players.
+
+responsive screenshot
+
+- ## The header
+  - The header shows the name of the game 'TiC TaC ToE', also the logo of the game.
+
+
+
+- ## Testing
+  - I tested and that page works in different broswsers, Chrome, Safari, Firefox.
+  - I confirm that this project is responsive, looks good and functions on all standard screen sizes using the     devtools device toolbar.
+  - I confirmed that all the page with the game are all readable and easy to understand. 
+
+- ## Validator Testing
+  - HTML 
+    - No errors were returned when passing through the official W3C validator
+  - CSS
+    - No errors were found when passing through the official (Jigsaw) validator
+  - Js
+    -
+- ## Unfixided bags
+    - No bags
+- ## Deployment
+    - The site was deployed to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub repository,navigate to the Settings tab
+    - From the source section drop-down menu, select the Master Branch
+    - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon 
+     display to indicate the successful deployment.
+    - The link can be found:
