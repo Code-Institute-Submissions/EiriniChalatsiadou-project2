@@ -68,16 +68,34 @@ function decideWinner() {
             return winnerO;
         }
     }
+
+    if (isDraw() === true) {
+        return winnerDRAW;
+    } else {
+        return null;
+    }
 }
 
-
-console.log('Decided winner test',decideWinner());
-
-
+console.log('Decided winner test', decideWinner());
 
 //need to check if draw
-
-
+function isDraw() {
+    //get all tiles
+    let tiles = document.getElementsByClassName('tile');
+    //for each tile
+    for (let i = 0; i < tiles.length; i++) {
+        //check if X class exist for tile i
+        const tileHasX = tiles[i].classList.contains('player-X-icon');
+        //check if O class exist for tile i
+        const tileHasO = tiles[i].classList.contains('player-O-icon');
+        //if both are false then return false
+        if (tileHasX === false && tileHasO === false) {
+            return false;
+        }
+    }
+    //outside loop return true
+    return true;
+}
 
 //Here is the function for checkWinnerPlayerX
 
@@ -96,18 +114,18 @@ function checkWinnerPlayer(winningPositions, playerIcon) {
     return result;
 
 }
-checkWinnerPlayer([3, 4, 5], 'X');
 
-console.log(checkWinnerPlayer([3, 4, 5], 'X'));
 
-checkWinnerPlayerO([0, 1, 2], 'O');
-console.log(checkWinnerPlayerO([0, 1, 2], 'O'));
+
+//startGame()
+//  clearboard()
+// if ( math.random > 0.5 )
 
 
 
 
 //calculateMove
-//startGame()
+
 //thereIsAWinner
 //  blinkWinningRow
 //  makeWinningSound
