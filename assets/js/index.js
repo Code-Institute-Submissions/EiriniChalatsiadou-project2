@@ -117,7 +117,7 @@ function checkWinnerPlayer(winningPositions, playerIcon) {
     return result;
 }
 
-
+//here is the function for startGame
 function startGame() {
 
     //clears board
@@ -138,17 +138,40 @@ function playerTurn() {
 }
 
 function computerTurn() {
-    //computer's Turn
+    //hide player x turn
     let computerTurn = document.getElementById("display-player-x-turn");
     computerTurn.classList.add("hide");
+    //computer's Turn
+    calculateMove();
+    //call playerTurn
     playerTurn();
-    //TODO: hide player x turn
-    //calculateMove();
-    //TODO: call playerTurn
-
 }
 
 //calculateMove
+function calculateMove() {
+    //create new array for empty tiles
+    const emptyTiles = [];
+    //get all tiles
+    let tiles = document.getElementsByClassName('tile');
+    //for each tile 
+    for (let i = 0; i < tiles.length; i++) {
+        //check if tile has player x or o classlist.contains
+        const isIconO = tiles[i].classList.contains("player-O-icon");
+        const isIconX = tiles[i].classList.contains("player-X-icon");
+        //if doesn'e contain any of then those push this element to empty tiles array
+        if (isIconO === false && isIconX === false) {
+            emptyTiles.push(tiles[i]);
+        }
+
+    }
+    //from empty tiles array choose one element at random
+    const randomEmptyTile = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
+    // to this element add the o player class    
+    randomEmptyTile.classList.add("player-O-icon");
+}
+
+calculateMove();
+
 
 //thereIsAWinner
 //  blinkWinningRow
