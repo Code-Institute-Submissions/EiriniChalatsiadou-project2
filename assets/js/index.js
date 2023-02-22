@@ -42,11 +42,13 @@ function stopGame(winner) {
     //update winner board
     increaseByOneResultBoard(winner);
     removeEventListeners();
-    
+
 
     //blink 
 
 //winning sound
+let mySound = new Audio('..assets/sounds/tada.mp3');
+mySound.play();
 }
 
 function addEventListeners() {

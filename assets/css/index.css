@@ -99,7 +99,7 @@ body {
     clear: both;
     font-size: 1.4rem;
 }
-
+/* blink for the winner*/
 .blink {
     animation: blink 1s steps(1, end) infinite;
   }

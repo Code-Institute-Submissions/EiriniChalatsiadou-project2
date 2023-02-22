@@ -10,7 +10,9 @@ responsive screenshot
 - ## The header
   - The header shows the name of the game 'TiC TaC ToE', also the logo of the game.
 
-
+- ## Comment
+  - Let's play...enjoy!
+     - This comment is to give you more fun, happiness, enjoy the game and parallel to be ready for the game with the other user.
 
 - ## Testing
   - I tested and that page works in different broswsers, Chrome, Safari, Firefox.
