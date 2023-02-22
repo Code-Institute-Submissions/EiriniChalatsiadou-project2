@@ -30,17 +30,16 @@ This game is for two players who take turns marking the spaces in a three-by-thr
    when you win the letter is blinking and also it is a winning sound (tadaa).
 
  ![game area](assets/images/screenshots-README/game-area-screenshot.png)
-
- - ## Result area
-  - This area shows the results. winner X or winner O or Draw. With that you have a full picture for the results.
-
- ![results area](assets/images/screenshots-README/results-creenshot.png)
-
  - ## Start-reset button
   - In this area it is a button that doing start and also reset button. 
   When the game is starting it is appearing the word start. During the play the button is disable and when the game finish the reset button is ready for the next game.
 
  ![start button](assets/images/screenshots-README/startbutton-screenshot.png)   ![reset button](assets/images/screenshots-README/resetbutton-screenshot.png)
+
+ - ## Result area
+  - This area shows the results. winner X or winner O or Draw. With that you have a full picture for the results.
+
+ ![results area](assets/images/screenshots-README/results-creenshot.png)
 
  - ## Footer
   - Minimal footer that is saying the copyright date 2023.
