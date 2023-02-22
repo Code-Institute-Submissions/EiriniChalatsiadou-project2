@@ -46,11 +46,13 @@ function endGame(winner) {
     //update winner board
     increaseByOneResultBoard(winner);
     removeEventListeners();
+    const button = document.getElementById('reset'); 
+    button.disabled = false;
+    button.innerHTML = '<b>Reset</b>';
     //blink 
 }
 
 function playSound() {
-
     let mySound = new Audio('../assets/sounds/tada.mp3');
     mySound.play();
 }
@@ -169,6 +171,8 @@ function startGame() {
         // player 0 turn
         computerTurn();
     }
+    const button = document.getElementById('reset'); 
+    button.disabled = true;
 }
 
 function showTurnMessage(player) {

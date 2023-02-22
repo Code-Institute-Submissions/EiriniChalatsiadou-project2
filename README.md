@@ -13,7 +13,7 @@ responsive screenshot
 ![header](assets/images/screenshots-README/header-logo-screenshot.png)
 - ## Comment
   - Let's play...enjoy!
-     - This comment is to give you more fun, happiness, enjoy the game and parallel to be ready for the game with the other user.
+     - This comment is to give you more fun, enjoy the game and parallel to be ready for the game with the other user.
 
 ![comment](assets/images/screenshots-README/comment-screenshot.png)
 
@@ -25,8 +25,26 @@ responsive screenshot
  - ## Game area
   - In this area is all the game! 
   The background is black and the marks are Neon letters so you can see the contrast and for more design.
-  when you win the letter is blinking and also is it a winning sound (tadaa).
-  
+  when you win the letter is blinking and also it is a winning sound (tadaa).
+
+ ![game area](assets/images/screenshots-README/game-area-screenshot.png)
+
+ - ## result area
+  - This area shows the results. winner X or winner O or Draw. With that you have a full picture for the results.
+
+ ![results area](assets/images/screenshots-README/results-creenshot.png)
+
+ - ## Start-reset button
+  - In this area it is a button that doing start and also reset button. 
+  When the game is starting it is appearing the word start. During the play the button is disable and when the game finish the reset button is ready for the next game.
+
+ ![start button](assets/images/screenshots-README/startbutton-screenshot.png)   ![reset button](assets/images/screenshots-README/resetbutton-screenshot.png)
+
+ - ## footer
+  - Minimal footer that is saying the copyright date 2023.
+
+ ![footer](assets/images/screenshots-README/footer-screenshot.png)
+ 
 
 - ## Testing
   - I tested and that page works in different broswsers, Chrome, Safari, Firefox.
