@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-
+/* Here is the hide class*/
 .hide {
     display: none;
 }
@@ -70,8 +70,9 @@ body {
     background-size: 134px;
     background-position: -6px 0px;
 }
+
 .results {
-    min-height:70px;
+    min-height: 70px;
 }
 
 /* Here is the css code for the results */
@@ -107,6 +108,7 @@ body {
     animation: blink 1s steps(1, end) infinite;
 }
 
+/* keyframes for blink*/
 @keyframes blink {
     0% {
         /* opacity: 1; */
@@ -124,6 +126,8 @@ body {
         background-position: -15px 0px;
     }
 }
+
+/* responsive*/
 
 @media only screen and (max-width: 900px) {
     #outer-header-container {

@@ -100,7 +100,7 @@ function addEventListeners() {
     }
 }
 
-
+//function for blink -is the winner
 function blink(winner) {
     const winningCombination = returnWinningCombination(winner);
     const tiles = document.getElementsByClassName('tile');
@@ -110,6 +110,7 @@ function blink(winner) {
     tiles[winningCombination[2]].classList.add('blink');
 }
 
+//function  returnWinningCombination(winner)
 function returnWinningCombination(winner) {
     let player = null;
 
