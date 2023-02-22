@@ -17,6 +17,17 @@ responsive screenshot
 
 ![comment](assets/images/screenshots-README/comment-screenshot.png)
 
+- ## Player's turn
+  - In this area shows which player's turn is X or O.
+
+ ![player's turn](assets/images/screenshots-README/player'sturn-screenshot.png)
+
+ - ## Game area
+  - In this area is all the game! 
+  The background is black and the marks are Neon letters so you can see the contrast and for more design.
+  when you win the letter is blinking and also is it a winning sound (tadaa).
+  
+
 - ## Testing
   - I tested and that page works in different broswsers, Chrome, Safari, Firefox.
   - I confirm that this project is responsive, looks good and functions on all standard screen sizes using the     devtools device toolbar.

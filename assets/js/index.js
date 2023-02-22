@@ -39,18 +39,15 @@ function addX() {
 }
 
 function endGame(winner) {
+    if (winner === winnerX || winner === winnerO) {
+        //winning sound
+        playSound();
+    }
     //update winner board
     increaseByOneResultBoard(winner);
     removeEventListeners();
-
-
     //blink 
-
-    //winning sound
-    playSound();
-
 }
-
 
 function playSound() {
 
@@ -120,7 +117,6 @@ function decideWinner() {
     } else {
         return null;
     }
-
 }
 
 //need to check if draw
@@ -133,13 +129,13 @@ function isDraw() {
         const tileHasX = tiles[i].classList.contains('player-X-icon');
         //check if O class exist for tile i
         const tileHasO = tiles[i].classList.contains('player-O-icon');
-        //if both are false then return null
+        //if both are false then no draw - game still playing
         if (tileHasX === false && tileHasO === false) {
             return false;
         }
     }
 
-    //outside loop return winnerDRAW
+    //is draw
     return true;
 }
 
@@ -175,24 +171,30 @@ function startGame() {
     }
 }
 
+function showTurnMessage(player) {
+    let element = document.getElementById('display-player-' + player + '-turn');
+    element.classList.remove("hide");
+}
+
+function hideTurnMessage(player) {
+    let element = document.getElementById('display-player-' + player + '-turn');
+    element.classList.add("hide");
+}
+
 function playerTurn() {
-    //show player  x turn div
-    let XplayerTurn = document.getElementById("display-player-x-turn");
-    XplayerTurn.classList.remove("hide");
-    let OplayerTurn = document.getElementById("display-player-o-turn");
-    OplayerTurn.classList.add("hide");
+    //show player x turn div
+    showTurnMessage('x');
+    //show player o turn div
+    hideTurnMessage('o');
 }
 
 function computerTurn() {
     //hide player x turn
-    let computerTurn = document.getElementById("display-player-x-turn");
-    computerTurn.classList.add("hide");
-    let XplayerTurn = document.getElementById("display-player-o-turn");
-    XplayerTurn.classList.remove("hide");
+    hideTurnMessage('x');
+    //show player o turn
+    showTurnMessage('o');
     //computer's Turn
-    setTimeout(calculateMove, 1500);
-    //call playerTurn
-    playerTurn();
+    setTimeout(calculateMove, 100);
 }
 
 //calculateMove
@@ -210,7 +212,6 @@ function calculateMove() {
         if (isIconO === false && isIconX === false) {
             emptyTiles.push(tiles[i]);
         }
-
     }
     //from empty tiles array choose one element at random
     const randomEmptyTile = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
@@ -222,16 +223,7 @@ function calculateMove() {
     const winner = decideWinner();
     if (winner !== null) {
         endGame(winner);
+    } else {
+        playerTurn();
     }
 }
-
-
-
-//thereIsAWinner
-//  blinkWinningRow
-//  makeWinningSound
-//NEED DO: fix effect on click board
-
-//???random be x or o
-
-// playSound();
