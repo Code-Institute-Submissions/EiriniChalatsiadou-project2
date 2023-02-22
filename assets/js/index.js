@@ -4,6 +4,7 @@ function clearBoard() {
     for (let i = 0; i < tiles.length; i++) {
         tiles[i].classList.remove("player-O-icon");
         tiles[i].classList.remove("player-X-icon");
+        tiles[i].classList.remove("blink");
     }
 }
 const winnerX = "WINNER-X";
@@ -54,6 +55,7 @@ function endGame(winner) {
         //winning sound
         playSound();
         //call blink 
+        blink(winner);
 
     }
     //update winner board
@@ -63,11 +65,6 @@ function endGame(winner) {
     button.disabled = false;
     button.innerHTML = '<b>Reset</b>';
 }
-
-function blink() {
-
-}
-
 
 //function for the playsound
 function playSound() {
@@ -103,9 +100,40 @@ function addEventListeners() {
     }
 }
 
+
+function blink(winner) {
+    const winningCombination = returnWinningCombination(winner);
+    const tiles = document.getElementsByClassName('tile');
+
+    tiles[winningCombination[0]].classList.add('blink');
+    tiles[winningCombination[1]].classList.add('blink');
+    tiles[winningCombination[2]].classList.add('blink');
+}
+
+function returnWinningCombination(winner) {
+    let player = null;
+
+    if (winner === winnerX) {
+        player = 'X';
+    } else {
+        player = 'O';
+    }
+    
+    for (let i = 0; i < winningTiles.length; i++) {
+        const winningCombination = winningTiles[i];
+        //check if X is winning
+        const isWinningCombination = checkWinnerPlayer(winningCombination, player);
+        // if player x is winner return winnerX
+        if (isWinningCombination === true) {
+            return winningCombination;
+        }
+    }
+
+    return [];
+}
+
 // This is the function for decide the Winner
 function decideWinner() {
-
 
     for (let i = 0; i < winningTiles.length; i++) {
         const winningCombination = winningTiles[i];
