@@ -1,4 +1,4 @@
-# TiC TaC ToE #
+# **TiC TaC ToE** 
 
 Games played on three-in-a-row boards can be traced back to ancient Egypt, where such game boards have been found on roofing tiles dating from around 1300 BC.
 An early variation of tic-tac-toe was played in the Roman Empire, around the first century BC.
@@ -6,13 +6,16 @@ An early variation of tic-tac-toe was played in the Roman Empire, around the fir
 This game is for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players.
 
 responsive screenshot
-
+- ## **Features**
 - ## The header
-  - The header shows the name of the game 'TiC TaC ToE', also the logo of the game.
+  - The header shows the name of the game 'TiC TaC ToE' and also the logo of the game.
 
+![header](assets/images/screenshots-README/header-logo-screenshot.png)
 - ## Comment
   - Let's play...enjoy!
      - This comment is to give you more fun, happiness, enjoy the game and parallel to be ready for the game with the other user.
+
+![comment](assets/images/screenshots-README/comment-screenshot.png)
 
 - ## Testing
   - I tested and that page works in different broswsers, Chrome, Safari, Firefox.
