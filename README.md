@@ -68,7 +68,7 @@ responsive screenshot
     - From the source section drop-down menu, select the Master Branch
     - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon 
      display to indicate the successful deployment.
-    - The link can be found [here](https://eirinichalatsiadou.github.io/Project2/)
+    - The link can be found [here](https://eirinichalatsiadou.github.io/project2/)
 
 
 - ## Credits
