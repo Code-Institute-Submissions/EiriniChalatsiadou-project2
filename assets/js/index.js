@@ -10,6 +10,17 @@ const winnerX = "WINNER-X";
 const winnerO = "WINNER-O";
 const winnerDRAW = "WINNER-DRAW";
 
+const winningTiles = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+
 //This is the function for increaseByOneResultBoard
 function increaseByOneResultBoard(result) {
     if (result === winnerX) {
@@ -42,6 +53,8 @@ function endGame(winner) {
     if (winner === winnerX || winner === winnerO) {
         //winning sound
         playSound();
+        //call blink 
+
     }
     //update winner board
     increaseByOneResultBoard(winner);
@@ -49,11 +62,16 @@ function endGame(winner) {
     const button = document.getElementById('reset');
     button.disabled = false;
     button.innerHTML = '<b>Reset</b>';
-    //blink 
 }
+
+function blink() {
+
+}
+
+
 //function for the playsound
 function playSound() {
-    let mySound = new Audio('../assets/sounds/tada.mp3');
+    let mySound = new Audio('/assets/sounds/tada.mp3');
     mySound.play();
 }
 
@@ -87,16 +105,7 @@ function addEventListeners() {
 
 // This is the function for decide the Winner
 function decideWinner() {
-    let winningTiles = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ];
+
 
     for (let i = 0; i < winningTiles.length; i++) {
         const winningCombination = winningTiles[i];
