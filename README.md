@@ -24,8 +24,8 @@ responsive screenshot
 
  - ## Game area
   - In this area is all the game! 
-  The background is black and the marks are Neon letters so you can see the contrast and for more design.
-  when you win the letter is blinking and also it is a winning sound (tadaa).
+   The background is black and the marks are Neon letters so you can see the contrast and for more design.
+   when you win the letter is blinking and also it is a winning sound (tadaa).
 
  ![game area](assets/images/screenshots-README/game-area-screenshot.png)
 
@@ -59,8 +59,8 @@ responsive screenshot
   - Js
     - No errors were found when passing through the official (jshint) validator
 
-- ## Unfixided bags
-    - No bags
+- ## Unfixided bugs
+    - No bugs
 
 - ## Deployment
     - The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -68,7 +68,8 @@ responsive screenshot
     - From the source section drop-down menu, select the Master Branch
     - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon 
      display to indicate the successful deployment.
-    - The link can be found:
+    - The link can be found [here](https://eirinichalatsiadou.github.io/Project2/)
+
 
 - ## Credits
  - ### Content

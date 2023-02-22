@@ -37,7 +37,7 @@ function addX() {
         endGame(winner);
     }
 }
-
+//function for the endGame winner
 function endGame(winner) {
     if (winner === winnerX || winner === winnerO) {
         //winning sound
@@ -46,12 +46,12 @@ function endGame(winner) {
     //update winner board
     increaseByOneResultBoard(winner);
     removeEventListeners();
-    const button = document.getElementById('reset'); 
+    const button = document.getElementById('reset');
     button.disabled = false;
     button.innerHTML = '<b>Reset</b>';
     //blink 
 }
-
+//function for the playsound
 function playSound() {
     let mySound = new Audio('../assets/sounds/tada.mp3');
     mySound.play();
@@ -113,7 +113,7 @@ function decideWinner() {
             return winnerO;
         }
     }
-
+    //if is Draw true
     if (isDraw() === true) {
         return winnerDRAW;
     } else {
@@ -142,7 +142,6 @@ function isDraw() {
 }
 
 //Here is the function for checkWinnerPlayerX
-
 function checkWinnerPlayer(winningPositions, playerIcon) {
     let tiles = document.getElementsByClassName('tile');
     let position1 = winningPositions[0];
@@ -171,10 +170,10 @@ function startGame() {
         // player 0 turn
         computerTurn();
     }
-    const button = document.getElementById('reset'); 
+    const button = document.getElementById('reset');
     button.disabled = true;
 }
-
+//function for show nad hide Message
 function showTurnMessage(player) {
     let element = document.getElementById('display-player-' + player + '-turn');
     element.classList.remove("hide");
