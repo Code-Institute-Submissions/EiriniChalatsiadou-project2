@@ -71,7 +71,7 @@ function blink() {
 
 //function for the playsound
 function playSound() {
-    let mySound = new Audio('/assets/sounds/tada.mp3');
+    let mySound = new Audio('assets/sounds/tada.mp3');
     mySound.play();
 }
 
