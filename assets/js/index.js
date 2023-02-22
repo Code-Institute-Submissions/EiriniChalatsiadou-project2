@@ -27,8 +27,25 @@ function increaseByOneResultBoard(result) {
 function addX() {
     //add class x to element
     this.classList.add('player-X-icon');
-    //call computerTurn
-    computerTurn();
+    this.removeEventListener('click', addX, false);
+    //decide winner if exists
+    const winner = decideWinner();
+    if (winner === null) {
+        //call computerTurn
+        computerTurn();
+    } else {
+        stopGame(winner);
+    }
+
+
+}
+
+function stopGame(winner) {
+    console.log(winner);
+    //update winner board
+    //blink 
+    //winning sound
+    // disable all clicks / remove all evenetListeners with click addX
 }
 
 function addEventListeners() {
@@ -39,7 +56,7 @@ function addEventListeners() {
         tiles[i].addEventListener('click', addX);
     }
 }
-addEventListeners();
+
 // This is the function for decide the Winner
 function decideWinner() {
     let winningTiles = [
@@ -119,9 +136,9 @@ function checkWinnerPlayer(winningPositions, playerIcon) {
 
 //here is the function for startGame
 function startGame() {
-
     //clears board
     clearBoard();
+    addEventListeners();
     if (Math.random() > 0.5) {
         //player x turn
         playerTurn();
@@ -168,9 +185,15 @@ function calculateMove() {
     const randomEmptyTile = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
     // to this element add the o player class    
     randomEmptyTile.classList.add("player-O-icon");
+    //cant be clicked anymore to addX
+    randomEmptyTile.removeEventListener('click', addX, false);
+
+    const winner = decideWinner();
+    if (winner !== null) {
+        stopGame(winner);
+    }
 }
 
-calculateMove();
 
 
 //thereIsAWinner

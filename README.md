@@ -24,8 +24,10 @@ responsive screenshot
     - No errors were found when passing through the official (Jigsaw) validator
   - Js
     -
+
 - ## Unfixided bags
     - No bags
+
 - ## Deployment
     - The site was deployed to GitHub pages. The steps to deploy are as follows:
     - In the GitHub repository,navigate to the Settings tab
@@ -33,3 +35,14 @@ responsive screenshot
     - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon 
      display to indicate the successful deployment.
     - The link can be found:
+
+- ## Credits
+ - ### Content
+   - https://en.wikipedia.org/wiki/Tic-tac-toe#:~:text=least%20three%20points.-,History,around%20the%20first%20century%20BC.
+
+ - ### Media
+   - https://myloview.com/sticker-glowing-neon-line-tic-tac-toe-game-icon-isolated-on-black-background-no-101067CC
+   - https://www.shutterstock.com/image-illustration/neon-3d-font-blue-pink-light-1678658893
+   - https://www.shutterstock.com/image-illustration/blue-pink-glowing-neon-tube-font-2152817635
+   
+   
