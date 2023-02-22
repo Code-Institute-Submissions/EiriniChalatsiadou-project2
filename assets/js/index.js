@@ -32,7 +32,7 @@ function addX() {
     const winner = decideWinner();
     if (winner === null) {
         //call computerTurn
-        setTimeout(computerTurn,1500);
+        computerTurn();
     } else {
         endGame(winner);
     }
@@ -53,7 +53,7 @@ function endGame(winner) {
 
 
 function playSound() {
-    
+
     let mySound = new Audio('../assets/sounds/tada.mp3');
     mySound.play();
 }
@@ -76,7 +76,6 @@ function removeEventListeners() {
         tiles[i].removeEventListener('click', addX, false);
     }
 }
-
 
 function addEventListeners() {
     // take all elements with class tile
@@ -123,8 +122,6 @@ function decideWinner() {
     }
 
 }
-
-console.log('Decided winner test', decideWinner());
 
 //need to check if draw
 function isDraw() {
@@ -174,7 +171,7 @@ function startGame() {
         playerTurn();
     } else {
         // player 0 turn
-        setTimeout(computerTurn,1500);
+        computerTurn();
     }
 }
 
@@ -182,14 +179,18 @@ function playerTurn() {
     //show player  x turn div
     let XplayerTurn = document.getElementById("display-player-x-turn");
     XplayerTurn.classList.remove("hide");
+    let OplayerTurn = document.getElementById("display-player-o-turn");
+    OplayerTurn.classList.add("hide");
 }
 
 function computerTurn() {
     //hide player x turn
     let computerTurn = document.getElementById("display-player-x-turn");
     computerTurn.classList.add("hide");
+    let XplayerTurn = document.getElementById("display-player-o-turn");
+    XplayerTurn.classList.remove("hide");
     //computer's Turn
-    calculateMove();
+    setTimeout(calculateMove, 1500);
     //call playerTurn
     playerTurn();
 }
