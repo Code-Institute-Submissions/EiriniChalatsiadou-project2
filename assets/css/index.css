@@ -70,6 +70,9 @@ body {
     background-size: 134px;
     background-position: -6px 0px;
 }
+.results {
+    min-height:70px;
+}
 
 /* Here is the css code for the results */
 .result {
