@@ -32,13 +32,13 @@ function addX() {
     const winner = decideWinner();
     if (winner === null) {
         //call computerTurn
-        computerTurn();
+        setTimeout(computerTurn,1500);
     } else {
-        stopGame(winner);
+        endGame(winner);
     }
 }
 
-function stopGame(winner) {
+function endGame(winner) {
     //update winner board
     increaseByOneResultBoard(winner);
     removeEventListeners();
@@ -46,9 +46,16 @@ function stopGame(winner) {
 
     //blink 
 
-//winning sound
-let mySound = new Audio('..assets/sounds/tada.mp3');
-mySound.play();
+    //winning sound
+    playSound();
+
+}
+
+
+function playSound() {
+    
+    let mySound = new Audio('../assets/sounds/tada.mp3');
+    mySound.play();
 }
 
 function addEventListeners() {
@@ -167,7 +174,7 @@ function startGame() {
         playerTurn();
     } else {
         // player 0 turn
-        computerTurn();
+        setTimeout(computerTurn,1500);
     }
 }
 
@@ -213,7 +220,7 @@ function calculateMove() {
 
     const winner = decideWinner();
     if (winner !== null) {
-        stopGame(winner);
+        endGame(winner);
     }
 }
 
@@ -225,3 +232,5 @@ function calculateMove() {
 //NEED DO: fix effect on click board
 
 //???random be x or o
+
+// playSound();
