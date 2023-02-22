@@ -131,7 +131,7 @@ body {
     }
 
     .tile {
-        min-width: 105px;
+        min-width: auto;
     }
 
     .result {
