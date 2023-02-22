@@ -36,17 +36,38 @@ function addX() {
     } else {
         stopGame(winner);
     }
-
-
 }
 
 function stopGame(winner) {
-    console.log(winner);
     //update winner board
+    increaseByOneResultBoard(winner);
+    removeEventListeners();
+    
+
     //blink 
-    //winning sound
-    // disable all clicks / remove all evenetListeners with click addX
+
+//winning sound
 }
+
+function addEventListeners() {
+    // take all elements with class tile
+    let tiles = document.getElementsByClassName('tile');
+    // for loop to take each element
+    for (let i = 0; i < tiles.length; i++) {
+        tiles[i].addEventListener('click', addX);
+    }
+}
+
+// disable all clicks / remove all evenetListeners with click addX
+function removeEventListeners() {
+    // take all elements with class tile
+    let tiles = document.getElementsByClassName('tile');
+    // for loop to take each element
+    for (let i = 0; i < tiles.length; i++) {
+        tiles[i].removeEventListener('click', addX, false);
+    }
+}
+
 
 function addEventListeners() {
     // take all elements with class tile
@@ -129,7 +150,7 @@ function checkWinnerPlayer(winningPositions, playerIcon) {
     let position3HasPlayerIcon = tiles[position3].classList.contains('player-' + playerIcon + '-icon');
 
     //here is the result if its true
-    let result = (position1HasPlayerIcon === true) && (position2HasPlayerIcon === true) && (position3HasPlayerIcon === true)
+    let result = (position1HasPlayerIcon === true) && (position2HasPlayerIcon === true) && (position3HasPlayerIcon === true);
 
     return result;
 }

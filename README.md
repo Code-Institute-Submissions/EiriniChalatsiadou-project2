@@ -23,7 +23,7 @@ responsive screenshot
   - CSS
     - No errors were found when passing through the official (Jigsaw) validator
   - Js
-    -
+    - No errors were found when passing through the official (jshint) validator
 
 - ## Unfixided bags
     - No bags
@@ -44,5 +44,5 @@ responsive screenshot
    - https://myloview.com/sticker-glowing-neon-line-tic-tac-toe-game-icon-isolated-on-black-background-no-101067CC
    - https://www.shutterstock.com/image-illustration/neon-3d-font-blue-pink-light-1678658893
    - https://www.shutterstock.com/image-illustration/blue-pink-glowing-neon-tube-font-2152817635
-   
+   - https://www.freesoundslibrary.com/tada-sound/#google_vignette
    
